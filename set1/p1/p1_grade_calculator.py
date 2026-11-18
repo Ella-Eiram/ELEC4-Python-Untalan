@@ -19,12 +19,16 @@ def evaluate_passing_status(average):
     else:
         return "Failed"
 
-    
-
-grades = [80, 90, 70]
-print(compute_average(grades))
-print(get_highest(grades))
-print(get_lowest(grades))
-print(evaluate_passing_status(compute_average(grades)))
 
 
+def get_valid_grade():
+    while True:
+        try:
+            grade = float(input("Enter a grade (0-100): "))
+            if 0 <= grade <= 100:
+                return grade
+            print("Grade must be 0 to 100.")
+        except ValueError:
+            print("Please type a number.")
+
+print(get_valid_grade())
