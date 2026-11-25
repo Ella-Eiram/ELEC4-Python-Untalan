@@ -94,4 +94,4 @@ if __name__ == "__main__":
 # very quickly. In this program I used a list (students) to store the names as
 # they were typed so I could sort and number them for display. I used a set
 # (name_keys) to store lowercase copies so I could quickly check whether a
-# name like "juan cruz" already exists as "Juan Cruz".
+# that adding juan cruz was blocked because Juan Cruz was already there.
