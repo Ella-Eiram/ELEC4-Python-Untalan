@@ -38,6 +38,9 @@ def open_file():
             contents = file.read()
     except FileNotFoundError:
         print(f'Error: The file "{filename}" does not exist.')
+    except IsADirectoryError:
+        # Happens when the name is a folder, or when nothing is typed
+        print(f'Error: "{filename}" is a folder, not a file.')
     else:
         print(f"\n----- {filename} -----")
         print(contents)
