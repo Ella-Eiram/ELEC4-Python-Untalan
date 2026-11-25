@@ -51,7 +51,7 @@ python set1/p1/p1_grade_calculator.py
 
 Choose **Enter grades**, type the grades (0–100), then choose **View results** to see the average, highest, lowest, and pass/fail status. A passing average is 75.
 
-![P1 sample run](set1/p1/screenshots/P1_cal.png)
+![P1 sample run](set1/p1/screenshots/p1_sample_run.png)
 
 ### P2 – Custom Module: student_utils
 
