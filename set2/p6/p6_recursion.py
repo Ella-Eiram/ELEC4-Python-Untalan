@@ -2,7 +2,7 @@
 # Section: IV-BSIT A
 # Activity: P6
 # Date: November 30, 2026
-# p6_recursion.py - four recursive functions with a menu to run them
+# p6_recursion.py - recursive functions with a menu to run them
 
 
 # Base case: n is 0 or 1, return 1
@@ -49,6 +49,16 @@ def search(items, target):
     return search(items[1:], target)
 
 
+# Base case: n is 0, print "Go!" and stop
+# Recursive call: countdown(n - 1)
+def countdown(n):
+    if n == 0:
+        print("Go!")
+        return
+    print(n)
+    countdown(n - 1)
+
+
 def get_whole_number(prompt, maximum):
     """Ask for a whole number from 0 to maximum."""
     while True:
@@ -68,7 +78,8 @@ def main():
         print("2. Fibonacci")
         print("3. Sum of 1 to n")
         print("4. Search a list")
-        print("5. Exit")
+        print("5. Countdown")
+        print("6. Exit")
         choice = input("Choose: ").strip()
 
         if choice == "1":
@@ -94,11 +105,15 @@ def main():
             print(f'"{target}" found? {found}')
 
         elif choice == "5":
+            n = get_whole_number("Count down from (0-50): ", 50)
+            countdown(n)
+
+        elif choice == "6":
             print("Goodbye!")
             break
 
         else:
-            print("Invalid choice. Please pick 1-5.")
+            print("Invalid choice. Please pick 1-6.")
 
 
 if __name__ == "__main__":
