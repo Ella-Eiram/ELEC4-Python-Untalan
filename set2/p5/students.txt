@@ -1,0 +1,6 @@
+23-ln-5223|Rhuella Marie Untalan|IV-BSIT A|95.0
+23-ln-5100|Matthew Zacarias|IV-BSIT A|91.0
+2023-4701|Jc Balcarse|IV-BSIT A|90.0
+2023-4013|Daniel Manaois|IV-BSIT A|89.0
+2023-5002|Mark Gonzales|IV-BSIT A|90.0
+ABC|ABS|ABC|81.0
