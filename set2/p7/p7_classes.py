@@ -86,3 +86,48 @@ class Section:
             student.display()
         print(f"\n  Total students: {len(self.students)}")
         print(f"  Class average: {self.get_class_average():.2f}")
+
+        
+
+def main():
+    print("Student Management System - by Rhuella Marie Untalan")
+
+    # Create objects
+    elec4 = Subject("ELEC 4", "Python Programming", 3)
+    section_a = Section("IV-BSIT A", elec4)
+
+    student1 = Student("2023-001", "Juan Dela Cruz", "BSIT", 88)
+    student2 = Student("2023-002", "Maria Santos", "BSIT", 72)
+    student3 = Student("2023-003", "Ana Reyes", "BSIT", 95)
+
+    section_a.add_student(student1)
+    section_a.add_student(student2)
+    section_a.add_student(student3)
+
+    print("\n===== BEFORE UPDATE =====")
+    section_a.list_students()
+
+    # Update one student
+    print("\n===== UPDATING Maria Santos =====")
+    maria = section_a.find_student("2023-002")
+    maria.update_info(name="Maria Clara Santos")
+    print("  Trying to set grade to 150...")
+    maria.set_grade(150)              # rejected by the setter
+    print("  Trying to set grade to 81...")
+    if maria.set_grade(81):           # accepted
+        print(f"  New grade: {maria.get_grade()}")
+
+    print("\n===== AFTER UPDATE =====")
+    section_a.list_students()
+
+    # Show that the private attribute cannot be read directly
+    print("\n===== PRIVATE ATTRIBUTE TEST =====")
+    try:
+        print(student1.__grade)
+    except AttributeError:
+        print("  student1.__grade cannot be accessed directly (it is private).")
+        print(f"  Using the getter instead: {student1.get_grade()}")
+
+
+if __name__ == "__main__":
+    main()
