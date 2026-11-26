@@ -55,3 +55,37 @@ class Staff(Person):
     def introduce(self):
         super().introduce()
         print(f"   I work at the {self.office}.")
+
+
+
+def main():
+    print("Inheritance and Polymorphism - by Rhuella Marie Untalan\n")
+
+    # Objects of different classes, all stored in one list
+    people = [
+        Person("Pedro Penduko", 30),
+        Student("Rhuella Marie Untalan", 21, "BSIT", "4th year"),
+        Teacher("Mr. Santos", 40, "Python Programming", 10),
+        Student("Juan Dela Cruz", 22, "BSIT", "4th year"),
+        Staff("Ms. Reyes", 35, "Registrar's Office"),
+    ]
+
+    # Polymorphism: the same call, introduce(), gives a different
+    # output depending on each object's class
+    for person in people:
+        print(f"[{type(person).__name__}]")
+        person.introduce()
+        print()
+
+    # Inheritance check: every child object is also a Person
+    print("Is each object a Person?")
+    for person in people:
+        print(f"  {person.name}: {isinstance(person, Person)}")
+
+
+if __name__ == "__main__":
+    main()
+
+
+# INHERITANCE AND POLYMORPHISM (write this in your own words, 3-5 sentences):
+#
