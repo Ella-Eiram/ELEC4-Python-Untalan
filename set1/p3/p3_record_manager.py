@@ -88,10 +88,11 @@ if __name__ == "__main__":
     main()
 
 
-# LIST vs SET (write this part in your own words):
-# A list keeps items in order, allows duplicates, and lets you access items by
-# position. A set has no order, never keeps duplicates, and checks membership
-# very quickly. In this program I used a list (students) to store the names as
-# they were typed so I could sort and number them for display. I used a set
-# (name_keys) to store lowercase copies so I could quickly check whether a
-# that adding juan cruz was blocked because Juan Cruz was already there.
+# LIST vs SET:
+# A list keeps items in the order I add them and allows duplicates, while a
+# set has no order and automatically ignores duplicates.
+# In my program, I used the students list to keep the names exactly how they
+# were typed, so I can sort them and show them numbered in the display.
+# I used the name_keys set to store lowercase copies of the names, so I can
+# quickly check if "juan cruz" already exists even if it was added as
+# "Juan Cruz".
