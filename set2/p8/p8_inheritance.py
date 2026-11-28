@@ -88,4 +88,4 @@ if __name__ == "__main__":
 
 
 # INHERITANCE AND POLYMORPHISM (write this in your own words, 3-5 sentences):
-#
+# Inheritance allows a new class to inherit attributes and methods from an existing class, promoting code reuse. Polymorphism enables objects of different types to be treated as instances of the same type through a common interface, allowing for flexible and dynamic behavior at runtime.
