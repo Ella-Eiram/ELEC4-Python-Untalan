@@ -87,11 +87,11 @@ while True:
 
 
 # LOCAL vs GLOBAL VARIABLES:
-# A global variable is created outside any function, like my grades list,
-# so the menu can use it for the whole time the program is running.
-# A local variable is created inside a function and only exists while that
-# function runs, like count and new_grades inside enter_grades().
-# The grades parameter in compute_average(grades) is also local, even though
-# it has the same name as the global list.
-# If I tried to print new_grades outside enter_grades(), Python would give a
-# NameError because that variable no longer exists there.
+# In my program, grades is a global variable because I created it outside
+# all the functions, so the menu can keep using it until I exit.
+# The variables inside enter_grades(), like count and new_grades, are local,
+# which means they only exist while that function is running.
+# Even the grades inside compute_average(grades) is local, it's just a copy
+# that the function receives, not the same variable as the global one.
+# So if I tried to print new_grades outside its function, I would get a
+# NameError because Python already forgot it after the function ended.
